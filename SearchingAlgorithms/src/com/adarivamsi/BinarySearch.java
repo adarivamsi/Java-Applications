@@ -1,10 +1,19 @@
 package com.adarivamsi;
-
+/**
+ * Copyright
+ */
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
 public class BinarySearch {
+
+    /** Iterative Approach Algorithm
+        1. Start from the leftmost element in the Array to the end of the Array
+        2. Create a mid element as the center by initial + last / 2
+        3. Check the middle index value If matches return index of the value located
+        4. If the middle index value is greater than the value set initial element to middle + 1
+        5. If the middle index value is lesser than the value set last element to middle - 1
+        6. If not found return -1
+     **/
 
     // Iterative Approach
     public int iterativeSearch(int[] arr, int find) {
@@ -25,6 +34,15 @@ public class BinarySearch {
 
         return -1;
     }
+
+    /** Recursive Approach Algorithm
+         1. Start from the leftmost element in the Array to the end of the Array
+         2. Create a mid element as the center by initial + last / 2
+         3. Check the middle index value If matches return index of the value located
+         4. If the middle index value is greater than the value return initial element to middle + 1
+         5. If the middle index value is lesser than the value return last element to middle - 1
+         6. If not found return -1
+     **/
 
     // Recursive Approach
     public int recursiveSearch(int[] arr, int i, int j, int find) {
