@@ -40,9 +40,13 @@ public class Main {
 //      JumpSearch jumpSearch = new JumpSearch();
 //      int answer = jumpSearch.search(arr,find);
 
-//      InterpolationSearch
-        InterpolationSearch interpolationSearch = new InterpolationSearch();
-        int answer = interpolationSearch.search(arr,find);
+//      Interpolation Search
+//      InterpolationSearch interpolationSearch = new InterpolationSearch();
+//      int answer = interpolationSearch.search(arr,find);
+
+//      Exponential Search
+      ExponentialSearch exponentialSearch = new ExponentialSearch();
+      int answer = exponentialSearch.search(arr,find);
 
 //      Print elapsed time
         long end = System.currentTimeMillis();
