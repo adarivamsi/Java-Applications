@@ -24,6 +24,7 @@ public class Main {
         System.out.println("8. Counting Sort");
         System.out.println("9. Bucket Sort");
         System.out.println("10. Shell Sort");
+        System.out.println("11. Comb Sort");
 
         System.out.println("Enter the type of Sort to be performed : ");
         Scanner scanner = new Scanner(System.in);
@@ -40,6 +41,7 @@ public class Main {
         CountingSort countingSort = new CountingSort();
         BucketSort bucketSort = new BucketSort();
         ShellSort shellSort = new ShellSort();
+        CombSort combSort = new CombSort();
 
         switch (input) {
             case 1:
@@ -94,6 +96,11 @@ public class Main {
             case 10:
                 start = System.currentTimeMillis();
                 answer = shellSort.sort(arr);
+                printOutput();
+                break;
+            case 11:
+                start = System.currentTimeMillis();
+                answer = combSort.sort(arr);
                 printOutput();
                 break;
             default:
