@@ -17,6 +17,7 @@ public class Main {
         System.out.println("1. Selection Sort");
         System.out.println("2. Bubble Sort");
         System.out.println("3. Insertion Sort");
+        System.out.println("4. Merge Sort");
 
         System.out.println("Enter the type of Sort to be performed : ");
         Scanner scanner = new Scanner(System.in);
@@ -26,6 +27,7 @@ public class Main {
         SelectionSort selectionSort = new SelectionSort();
         BubbleSort bubbleSort = new BubbleSort();
         InsertionSort insertionSort = new InsertionSort();
+        MergeSort mergeSort = new MergeSort();
 
         switch (input) {
             case 1:
@@ -41,6 +43,13 @@ public class Main {
             case 3:
                 start = System.currentTimeMillis();
                 answer = insertionSort.sort(arr);
+                printOutput();
+                break;
+            case 4:
+                start = System.currentTimeMillis();
+                int initial = 0;
+                int end = arr.length-1;
+                answer = mergeSort.sort(arr,initial,end);
                 printOutput();
                 break;
             default:
