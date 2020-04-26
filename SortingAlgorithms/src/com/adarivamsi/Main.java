@@ -19,6 +19,7 @@ public class Main {
         System.out.println("3. Insertion Sort");
         System.out.println("4. Merge Sort");
         System.out.println("5. Heap Sort");
+        System.out.println("6. Quick Sort");
 
         System.out.println("Enter the type of Sort to be performed : ");
         Scanner scanner = new Scanner(System.in);
@@ -30,6 +31,7 @@ public class Main {
         InsertionSort insertionSort = new InsertionSort();
         MergeSort mergeSort = new MergeSort();
         HeapSort heapSort = new HeapSort();
+        QuickSort quickSort = new QuickSort();
 
         switch (input) {
             case 1:
@@ -57,6 +59,13 @@ public class Main {
             case 5:
                 start = System.currentTimeMillis();
                 answer = heapSort.sort(arr);
+                printOutput();
+                break;
+            case 6:
+                start = System.currentTimeMillis();
+                initial = 0;
+                end = arr.length-1;
+                answer = quickSort.sort(arr,initial,end);
                 printOutput();
                 break;
             default:
