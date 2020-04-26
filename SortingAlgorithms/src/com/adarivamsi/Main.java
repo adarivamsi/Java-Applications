@@ -18,6 +18,7 @@ public class Main {
         System.out.println("2. Bubble Sort");
         System.out.println("3. Insertion Sort");
         System.out.println("4. Merge Sort");
+        System.out.println("5. Heap Sort");
 
         System.out.println("Enter the type of Sort to be performed : ");
         Scanner scanner = new Scanner(System.in);
@@ -28,6 +29,7 @@ public class Main {
         BubbleSort bubbleSort = new BubbleSort();
         InsertionSort insertionSort = new InsertionSort();
         MergeSort mergeSort = new MergeSort();
+        HeapSort heapSort = new HeapSort();
 
         switch (input) {
             case 1:
@@ -50,6 +52,11 @@ public class Main {
                 int initial = 0;
                 int end = arr.length-1;
                 answer = mergeSort.sort(arr,initial,end);
+                printOutput();
+                break;
+            case 5:
+                start = System.currentTimeMillis();
+                answer = heapSort.sort(arr);
                 printOutput();
                 break;
             default:
