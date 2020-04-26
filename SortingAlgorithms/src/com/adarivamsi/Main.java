@@ -20,6 +20,7 @@ public class Main {
         System.out.println("4. Merge Sort");
         System.out.println("5. Heap Sort");
         System.out.println("6. Quick Sort");
+        System.out.println("7. Radix Sort");
 
         System.out.println("Enter the type of Sort to be performed : ");
         Scanner scanner = new Scanner(System.in);
@@ -32,6 +33,7 @@ public class Main {
         MergeSort mergeSort = new MergeSort();
         HeapSort heapSort = new HeapSort();
         QuickSort quickSort = new QuickSort();
+        RadixSort radixSort = new RadixSort();
 
         switch (input) {
             case 1:
@@ -66,6 +68,11 @@ public class Main {
                 initial = 0;
                 end = arr.length-1;
                 answer = quickSort.sort(arr,initial,end);
+                printOutput();
+                break;
+            case 7:
+                start = System.currentTimeMillis();
+                answer = radixSort.sort(arr);
                 printOutput();
                 break;
             default:
