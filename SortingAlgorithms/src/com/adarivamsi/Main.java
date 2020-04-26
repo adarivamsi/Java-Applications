@@ -16,6 +16,7 @@ public class Main {
         System.out.println("List of Sort operations can be performed : ");
         System.out.println("1. Selection Sort");
         System.out.println("2. Bubble Sort");
+        System.out.println("3. Insertion Sort");
 
         System.out.println("Enter the type of Sort to be performed : ");
         Scanner scanner = new Scanner(System.in);
@@ -24,6 +25,7 @@ public class Main {
         // Declaring classes
         SelectionSort selectionSort = new SelectionSort();
         BubbleSort bubbleSort = new BubbleSort();
+        InsertionSort insertionSort = new InsertionSort();
 
         switch (input) {
             case 1:
@@ -34,6 +36,11 @@ public class Main {
             case 2:
                 start = System.currentTimeMillis();
                 answer = bubbleSort.sort(arr);
+                printOutput();
+                break;
+            case 3:
+                start = System.currentTimeMillis();
+                answer = insertionSort.sort(arr);
                 printOutput();
                 break;
             default:
