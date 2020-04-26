@@ -26,6 +26,7 @@ public class Main {
         System.out.println("10. Shell Sort");
         System.out.println("11. Comb Sort");
         System.out.println("12. Cycle Sort");
+        System.out.println("13. Pigeonhole Sort");
 
         System.out.println("Enter the type of Sort to be performed : ");
         Scanner scanner = new Scanner(System.in);
@@ -44,6 +45,7 @@ public class Main {
         ShellSort shellSort = new ShellSort();
         CombSort combSort = new CombSort();
         CycleSort cycleSort = new CycleSort();
+        PigeonholeSort pigeonholeSort = new PigeonholeSort();
 
         switch (input) {
             case 1:
@@ -108,6 +110,11 @@ public class Main {
             case 12:
                 start = System.currentTimeMillis();
                 answer = cycleSort.sort(arr);
+                printOutput();
+                break;
+            case 13:
+                start = System.currentTimeMillis();
+                answer = pigeonholeSort.sort(arr);
                 printOutput();
                 break;
             default:
