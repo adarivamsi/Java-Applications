@@ -22,6 +22,7 @@ public class Main {
         System.out.println("6. Quick Sort");
         System.out.println("7. Radix Sort");
         System.out.println("8. Counting Sort");
+        System.out.println("9. Bucket Sort");
 
         System.out.println("Enter the type of Sort to be performed : ");
         Scanner scanner = new Scanner(System.in);
@@ -36,6 +37,7 @@ public class Main {
         QuickSort quickSort = new QuickSort();
         RadixSort radixSort = new RadixSort();
         CountingSort countingSort = new CountingSort();
+        BucketSort bucketSort = new BucketSort();
 
         switch (input) {
             case 1:
@@ -80,6 +82,11 @@ public class Main {
             case 8:
                 start = System.currentTimeMillis();
                 answer = countingSort.sort(arr);
+                printOutput();
+                break;
+            case 9:
+                start = System.currentTimeMillis();
+                answer = bucketSort.sort(arr);
                 printOutput();
                 break;
             default:
